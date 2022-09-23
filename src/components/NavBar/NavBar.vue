@@ -1,6 +1,7 @@
 <template>
 <div class="bg-dark">
-   <nav class=" container d-flex justify-content-end py-1 ">
+   <nav class=" container d-flex justify-content-between py-1 ">
+    <router-link to="/"><button class="btn btn-primary">Home</button></router-link>
 <div v-if="!signedIn" class="d-flex justify-content-end">
   <button  class="btn btn-primary mx-2" :class="{'btn-secondary':selectedForm==='Sign in'}" @click="selectForm('Sign in')" :disabled="selectedForm==='Sign in'">Sign In</button>
   <button  class="btn btn-primary mx-2" :class="{'btn-secondary':selectedForm==='Sign up'}" @click="selectForm('Sign up')" :disabled="selectedForm==='Sign up'">Sign Up</button>
@@ -68,5 +69,10 @@
 </script>
 
 <style scoped>
-
+a{
+    color:wheat;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+}
 </style>
